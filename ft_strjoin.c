@@ -12,64 +12,6 @@
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *dest, const char *src, size_t sizeofbuf)
-{
-	size_t	i;
-	int		j;
-	int		k;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-		j++;
-	if (sizeofbuf <= i)
-		j += sizeofbuf;
-	else
-		j += i;
-	while (src[k] && i + 1 < sizeofbuf)
-	{
-		dest[i] = src[k];
-		i++;
-		k++;
-	}
-	dest[i] = '\0';
-	return (j);
-}
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t i)
-{
-	size_t	j;
-	size_t	len;
-
-	j = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	if (i > 0)
-	{
-		while (src[j] && j < (i - 1))
-		{
-			dest[j] = src[j];
-			j++;
-		}
-		dest[j] = '\0';
-	}
-	return (len);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

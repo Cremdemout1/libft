@@ -13,16 +13,6 @@
 #include "libft.h"
 #include <string.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strnstr(const char *hay, const char *needle, size_t n)
 {
 	size_t	i;
@@ -30,7 +20,7 @@ char	*ft_strnstr(const char *hay, const char *needle, size_t n)
 	int		needlelen;
 
 	i = 0;
-	needlelen = ft_strlen((char *)needle);
+	needlelen = ft_strlen(needle);
 	if (needlelen == 0)
 		return ((char *)hay);
 	while (i < n && hay[i])

@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 14:42:26 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/08 12:39:57 by ycantin          ###   ########.fr       */
+/*   Created: 2024/04/08 12:39:03 by ycantin           #+#    #+#             */
+/*   Updated: 2024/04/08 13:04:33 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "./libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char yeap(unsigned int hi, char ha)
 {
-	unsigned int	i;
-	char			*dest;
-
-	i = 0;
-	dest = (char *)malloc(((ft_strlen(s) + 1) * sizeof(char)));
-	if (!dest)
-		return (NULL);
-	while (s[i])
-	{
-		dest[i] = f(i, s[i]);
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    (void) hi;
+    if (ha > 96 && ha < 123)
+    {
+        return (ha - 32);
+    }
+    return (ha);
 }
 
-
-/* int main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
 	(void) argc;
+    if (!argv[1])
+        return (1);
     printf("original string: %s\n", argv[1]);
-    argv[1] = ft_strmapi(argv[1], ft_toupper1);
+    argv[1] = ft_strmapi(argv[1], yeap);
     printf("changed string: %s\n", argv[1]);
     free (argv[1]);
     return (0);
 }
- */
