@@ -6,11 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:43:32 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/24 15:45:33 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:37:23 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_tolower(int ch)
 {

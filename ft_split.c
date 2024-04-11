@@ -3,26 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:55 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/08 12:40:34 by ycantin          ###   ########.fr       */
+/*   Updated: 2024/04/10 16:47:38 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+typedef struct s_variables
 {
-	unsigned int	i;
-	size_t			length;
-	char			*dest;
+	int		word_count;
+	int		i;
+	int		start;
+	int		str_index;
+	char	**dest;
+}s_variables;
+
+char *ft_substr(char const *s,unsigned int start, size_t len)
+{
+	unsigned int i;
+	size_t length;
+	char *dest;
 
 	i = 0;
-	length = ft_strlen((char *)s);
-	if (start >= length)
+	length = ft_strlen((char*)s);
+	if(start >= length)
 		return (NULL);
-	dest = (char *)malloc((len + 1) * sizeof(char));
+	dest = (char *) malloc (sizeof(char) * len + 1);
 	if (dest == NULL)
 		return (NULL);
 	while (s[i] && i < len)
@@ -59,43 +67,38 @@ int	ft_count_words(const char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		word_count;
-	int		i;
-	int		start;
-	int		str_index;
-	char	**dest;
-
-	word_count = ft_count_words((char *)s, c);
-	i = 0;
-	start = 0;
-	str_index = 0;
-	dest = (char **)malloc((word_count + 1) * sizeof(char *));
-	if (dest == NULL)
+	struct s_variables var;
+	var.word_count = ft_count_words((char *)s, c);
+	var.i = 0;
+	var.start = 0;
+	var.str_index = 0;
+	var.dest = (char **)malloc((var.word_count + 1) * sizeof(char *));
+	if (var.dest == NULL)
 		return (NULL);
-	while (s[i])
+	while (s[var.i])
 	{
-		if (s[i] == c)
+		if (s[var.i] == c)
 		{
-			i++;
+			var.i++;
 			continue ;
 		}
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		dest[str_index++] = ft_substr(s, start, i - start);
+		var.start = var.i;
+		while (s[var.i] && s[var.i] != c)
+			var.i++;
+		var.dest[var.str_index++] = ft_substr(s, var.start, var.i - var.start);
 	}
-	dest[str_index] = NULL;
-	return (dest);
+	var.dest[var.str_index] = NULL;
+	return (var.dest);
 }
 
-/*
+
 int main (void)
 {
 	int		i;
 	char	**words;
 
     i = 0;
-    words = ft_split ("lorem,ipsum,dolor,sit,amet", ',');
+    words = ft_split ("lorem ipsum dolor sit amet", ' ');
     while (words[i])
     {
         printf("%s\n", words[i]);
@@ -104,4 +107,3 @@ int main (void)
     free (words);
     return (0);
 }
-*/

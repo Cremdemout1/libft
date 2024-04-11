@@ -12,24 +12,24 @@
 
 #include "./libft.h"
 
-char yeap(unsigned int hi, char ha)
+char	yeap(unsigned int hi, char ha)
 {
-    (void) hi;
-    if (ha > 96 && ha < 123)
-    {
-        return (ha - 32);
-    }
-    return (ha);
+	(void)hi;
+	if (ha > 96 && ha < 123)
+	{
+		return (ha - 32);
+	}
+	return (ha);
 }
 
-int main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	(void) argc;
-    if (!argv[1])
-        return (1);
-    printf("original string: %s\n", argv[1]);
-    argv[1] = ft_strmapi(argv[1], yeap);
-    printf("changed string: %s\n", argv[1]);
-    free (argv[1]);
-    return (0);
+	(void)argc;
+	if (!argv[1])
+		return (1);
+	printf("original string: %s\n", argv[1]);
+	argv[1] = ft_strmapi(argv[1], yeap);
+	printf("changed string: %s\n", argv[1]);
+	free(argv[1]);
+	return (0);
 }

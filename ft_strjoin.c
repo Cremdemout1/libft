@@ -20,12 +20,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
-	
 	full = (char *)malloc(((i + j + 1)) * sizeof(char));
-	
 	if (full == NULL)
 		return (NULL);
-		
 	ft_strlcpy(full, s1, i + 1);
 	ft_strlcat(full, s2, i + j + 1);
 	return (full);

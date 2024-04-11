@@ -6,7 +6,7 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:18:42 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/30 14:16:44 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/08 15:20:10 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 
-void	ft_free(void *content)
-{
-	free(content);
-}
 /* 
 int	main(void)
 {

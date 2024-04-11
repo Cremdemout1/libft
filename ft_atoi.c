@@ -6,12 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:36 by yohan             #+#    #+#             */
-/*   Updated: 2023/11/02 12:01:22 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:33:50 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int	ft_atoi(const char *str)
 {

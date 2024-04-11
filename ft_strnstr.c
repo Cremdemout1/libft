@@ -6,12 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:41:03 by yohan             #+#    #+#             */
-/*   Updated: 2023/11/02 11:30:01 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:36:47 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strnstr(const char *hay, const char *needle, size_t n)
 {

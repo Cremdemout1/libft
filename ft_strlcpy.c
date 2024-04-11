@@ -6,12 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:41:31 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/12 12:41:32 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:33:30 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t i)
 {

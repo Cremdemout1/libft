@@ -6,13 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 09:27:40 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/12 15:49:16 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:34:06 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	end_of_str(int nb)
 {

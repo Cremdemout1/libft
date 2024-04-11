@@ -6,11 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:43:35 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/12 12:43:36 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:37:33 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int ch)
 {
@@ -26,4 +26,3 @@ int	main (void)
 	return (0);
 }
 */
-

@@ -6,13 +6,11 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:43:10 by yohan             #+#    #+#             */
-/*   Updated: 2023/11/01 11:15:04 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:33:36 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t sizeofbuf)
 {
