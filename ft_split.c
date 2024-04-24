@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:55 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/17 12:24:09 by ycantin          ###   ########.fr       */
+/*   Updated: 2024/04/24 13:27:16 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_vars
 	char	**dest;
 }			t_vars;
 
-int	ft_count_words(const char *str, char c)
+static int	ft_count_words(const char *str, char c)
 {
 	int	i;
 	int	word_count;
@@ -70,8 +70,31 @@ char	**ft_split(char const *s, char c)
 	var.dest[var.str_index] = NULL;
 	return (var.dest);
 }
-
 /*
+char	**ft_split(char const *s, char c)
+{
+	bo = -1;
+	i = 0;
+	j = 0;
+	split_str = malloc(sizeof(char *) * ft_count_words(s, c) + 1);
+	if (split_str == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		if (s[i] != c && bo < 0)
+			bo = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && bo >= 0)
+		{
+			split_str[j++] = ft_substr(s, bo, i);
+			bo = -1;
+		}
+		i++;
+	}
+	split_str[j] = 0;
+	return (split_str);
+}
+
+
 int main (void)
 {
 	int		i;

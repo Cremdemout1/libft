@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 09:27:40 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/22 10:48:40 by ycantin          ###   ########.fr       */
+/*   Updated: 2024/04/24 13:27:39 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	end_of_str(int nb)
+static int	end_of_str(int nb)
 {
 	int	len;
 
