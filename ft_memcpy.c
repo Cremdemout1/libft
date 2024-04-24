@@ -6,7 +6,7 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:43 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:34:49 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/24 09:18:09 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,32 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t		i;
-	char		*d;
-	const char	*s;
+	char		*ptr;
+	const char	*copd;
 
 	i = 0;
-	d = dest;
-	s = src;
-	if (d == NULL && s == NULL)
+	ptr = (char *)dest;
+	copd = (const char *)src;
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	while (i < n)
 	{
-		d[i] = s[i];
+		ptr[i] = copd[i];
 		i++;
 	}
 	return (dest);
 }
+/* 
+#include <strings.h>
 
-
-/* int	main(void)
+int	main(void)
 {
-	char	src[] = "hello monkey";
-	char *dest = src + 6;
-	printf("%s\n", (char *) ft_memcpy(dest, src, 6));
-	printf("%s", (char *) memcpy(dest, src, 6));
+	char	dest[0];
+	char	src[];
+
+	src[] = "";
+	printf("%s\n", (char *) ft_memcpy(dest, src, 10));
+	printf("%s", (char *) memcpy(dest, src, 10));
 	return (0);
-} */
+}
+ */

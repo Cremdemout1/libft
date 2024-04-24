@@ -3,29 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:28 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/12 15:50:14 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/11 16:53:33 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* void	ft_bzero(void *str, size_t nb)
-{
-	size_t			i;
-	unsigned char	*ptr;
-
-	i = 0;
-	ptr = (unsigned char *)str;
-	while (ptr[i] && i < nb)
-	{
-		ptr[i] = 0;
-		i++;
-	}
-}
- */
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*dest;

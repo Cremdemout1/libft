@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:56:39 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/08 19:52:39 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/17 14:27:47 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,24 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		node = node->next;
 	}
 }
-/* 
+/*
+static void	ft_toupper1(void *ch)
+{
+    int i;
+    char *str;
+
+    
+	i = 0;
+    str = (char *) ch;
+    while (str[i])
+    {
+        if (str[i] >= 97 && str[i] <= 122)
+            str[i] -= 32;
+        i++;
+    }
+}
+
+
 int main (void)
 {
 	t_list	**listNode;
@@ -71,7 +88,8 @@ int main (void)
     return (0);
 }
 
-    int main(void)
+
+int	main(void)
 {
     char buffer[15];
     int i;

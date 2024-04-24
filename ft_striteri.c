@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:16:36 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:36:10 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/11 17:03:21 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		s++;
 	}
 }
-
+/* 
 void	ft_tolower2(unsigned int i, char *str)
 {
 	(void)i;
 	if (*str >= 97 && *str <= 122)
 		*str -= 32;
 }
-/* 
+
 int	main(void)
 {
 	char	str[];

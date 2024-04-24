@@ -3,63 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/30 12:48:25 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/11 10:26:10 by yohan            ###   ########.fr       */
+/*   Created: 2024/04/17 13:36:30 by ycantin           #+#    #+#             */
+/*   Updated: 2024/04/17 13:37:06 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-typedef struct s_variables
-{
-	int		i;
-	int		start;
-	int		end;
-	int		len;
-	char	*dest;
-}s_variables;
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	struct s_variables var;
-	var.i = 0;
-	var.start = 0;
-	var.end = 0;
-	var.len = 0;
-	while (s1[var.end])
-		var.end++;
-	var.end--;
-	while (s1[var.start] && ft_strchr(set, s1[var.start]))
-		var.start++;
-	while (var.end >= var.start && ft_strchr(set, s1[var.end]))
-		var.end--;
-	var.len = var.end - var.start + 1;
-	var.dest = (char *)malloc((var.len + 1) * sizeof(char));
-	if (var.dest == NULL)
-		return (NULL);
-	while (var.start <= var.end)
-	{
-		var.dest[var.i] = s1[var.start];
-		var.start++;
-		var.i++;
-	}
-	var.dest[var.i] = '\0';
-	return (var.dest);
-}
+	int	i;
+	int	start;
+	int	end;
 
-/* 
+	i = 0;
+	start = 0;
+	end = 0;
+	if (s1 == NULL)
+		return (NULL);
+	if (set == NULL)
+		return ((char *)s1);
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	start = i;
+	end = ft_strlen(s1);
+	while (end > 0 && ft_strchr(set, s1[end - 1]))
+		end--;
+	return (ft_substr(s1, start, (end - start)));
+}
+/*
 int main (void)
 {
-    char set[] = "car";
-    char str[] = "car sis car";
-    char *trimmed = ft_strtrim(str,  set);
-        
-    if (trimmed != NULL)
-    {
-        printf("%s\n", trimmed);
-        free (trimmed);
-    }
-    return (0);
-} */
+	char	set[];
+	char	str[];
+	char	*trimmed;
+
+	set[] = "ka";
+	str[] = "ka ya ka";
+	trimmed = ft_strtrim(str,  set);
+		
+	if (trimmed != NULL)
+	{
+		printf("%s\n", trimmed);
+		free (trimmed);
+	}
+	return (0);
+}
+*/

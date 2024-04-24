@@ -3,44 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:55 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:47:38 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/17 12:24:09 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-typedef struct s_variables
+
+typedef struct s_vars
 {
 	int		word_count;
 	int		i;
 	int		start;
 	int		str_index;
 	char	**dest;
-}s_variables;
-
-char *ft_substr(char const *s,unsigned int start, size_t len)
-{
-	unsigned int i;
-	size_t length;
-	char *dest;
-
-	i = 0;
-	length = ft_strlen((char*)s);
-	if(start >= length)
-		return (NULL);
-	dest = (char *) malloc (sizeof(char) * len + 1);
-	if (dest == NULL)
-		return (NULL);
-	while (s[i] && i < len)
-	{
-		dest[i] = s[start + i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+}			t_vars;
 
 int	ft_count_words(const char *str, char c)
 {
@@ -67,7 +46,8 @@ int	ft_count_words(const char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	struct s_variables var;
+	t_vars	var;
+
 	var.word_count = ft_count_words((char *)s, c);
 	var.i = 0;
 	var.start = 0;
@@ -91,14 +71,14 @@ char	**ft_split(char const *s, char c)
 	return (var.dest);
 }
 
-
+/*
 int main (void)
 {
 	int		i;
 	char	**words;
 
     i = 0;
-    words = ft_split ("lorem ipsum dolor sit amet", ' ');
+    words = ft_split ("lorem,ipsum,dolor,sit,amet", ',');
     while (words[i])
     {
         printf("%s\n", words[i]);
@@ -107,3 +87,4 @@ int main (void)
     free (words);
     return (0);
 }
+*/

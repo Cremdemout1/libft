@@ -6,7 +6,7 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:47 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:34:54 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/24 09:29:28 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,31 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int			i;
-	char		*dest1;
-	char const	*src1;
+	unsigned char		*dest1;
+	const unsigned char	*src1;
 
-	i = n - 1;
-	dest1 = dest;
-	src1 = src;
-	/* if (src1 == NULL  dest1 == NULL)
-		return (NULL); */
-	if (dest1 > src1)
+	dest1 = (unsigned char *)dest;
+	src1 = (unsigned const char *)src;
+	if (dest == src || n == 0)
+		return (dest);
+	if (dest > src)
 	{
-		while (i >= 0)
-		{
-			dest1[i] = src1[i];
-			i--;
-		}
+		while (n--)
+			dest1[n] = src1[n];
 	}
 	else
-		ft_memcpy(dest1, src1, n);
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
-/* 
-int main (void)
-{
-	char	dest[20];
-	char	src[] = "hello000i";
-	
-    printf("%s\n", (char *)ft_memmove(dest, src, 30));
-    //printf("%s", (char *)memmove(dest, src, ));
-    return (0);
-}
- */
+
+// int main (void)
+// {
+// 	char	*dest;
+// 	char *str = "hello000i";
+
+// 	dest = malloc (sizeof (char) * 11);
+//     printf("original: %s\n", str);
+//     printf("moved: %s\n", (char *)ft_memmove(dest, str, 30));
+//     printf("%s", (char *)memmove(dest, src, ));
+//     return (0);
+// }

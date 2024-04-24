@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 12:43:10 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:33:36 by yohan            ###   ########.fr       */
+/*   Created: 2024/04/23 21:18:06 by yohan             #+#    #+#             */
+/*   Updated: 2024/04/23 21:19:17 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t sizeofbuf)
 {
 	size_t	i;
-	int		j;
-	int		k;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
 	k = 0;
-	while (dest[i])
+	while (dest[i] != '\0')
 		i++;
-	while (src[j])
+	while (src[j] != '\0')
 		j++;
 	if (sizeofbuf <= i)
 		j += sizeofbuf;
 	else
 		j += i;
-	while (src[k] && i + 1 < sizeofbuf)
+	while (src[k] != '\0' && i + 1 < sizeofbuf)
 	{
 		dest[i] = src[k];
 		i++;
@@ -38,16 +38,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t sizeofbuf)
 	dest[i] = '\0';
 	return (j);
 }
-
 /* 
-int	main (void)
-{
-	char	dest[15];
+#include <stdio.h>
+#include <string.h>
 
-	dest[15] = "o";
-    printf("%zu\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 15));
-    printf("%zu\n", strlcat(dest, "lorem ipsum dolor sit amet", 15));
-    write(1, dest, 15);
+int	main(void)
+{
+	char dest1[25] = "yeayea";
+	int  n = -1;
+	char src[] = "nonono";
+	printf("%zu\n", ft_strlcat(dest1, src, n));
+	printf("%s\n", dest1);
 	return (0);
-}
-*/
+} */

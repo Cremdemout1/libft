@@ -3,37 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 19:05:11 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/30 10:22:46 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/11 17:00:50 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-    if (new)
-    {
-        new -> next = *lst;
-        *lst = new; 
-    }
-}
-
-t_list	*ft_lstnew(void *content)
-{
-    t_list *list;
-
-    list = malloc (sizeof (t_list));
-    if (!list)
-        return (NULL);
-    list -> content = content;
-    list -> next = NULL;
-    return (list);
-}
-*/
 int	ft_lstsize(t_list *lst)
 {
 	int	node_amount;

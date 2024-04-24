@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 09:27:40 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/10 16:34:06 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/22 10:48:40 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,32 +50,37 @@ char	*ft_itoa(int n)
 		dest[0] = '-';
 	return (dest);
 }
-
-/* int	main(void)
+/*
+int	main(void)
 {
-	//char *ptr;
-	char *str1 = ft_itoa(2147483647);
-	char *str2 = ft_itoa(-2147483648);
-	char *str3 = ft_itoa(0);
-	char *str4 = ft_itoa(10);
+	char	*str1;
+	char	*str2;
+	char	*str3;
+	char	*str4;
+	int		i;
+	char	*ptr;
+
+	str1 = ft_itoa(2147483647);
+	str2 = ft_itoa(-2147483648);
+	str3 = ft_itoa(0);
+	str4 = ft_itoa(10);
 	printf("%s\n", str1);
 	printf("%s\n", str2);
 	printf("%s\n", str3);
 	printf("%s\n", str4);
-	int i = -2147483648;
+	i = -21;
     
     while (i < 100)
     {
         ptr = ft_itoa(i);
         printf("%s\n", ptr);
+		free(ptr);
         i++;
     } 
-
 	free(str1);
 	free(str2);
 	free(str3);
 	free(str4);
-	//free (ptr);
-
 	return (0);
-}*/
+}
+*/

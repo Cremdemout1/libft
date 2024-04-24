@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:51 by yohan             #+#    #+#             */
-/*   Updated: 2023/10/12 12:42:52 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/22 11:05:42 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,16 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (ptr);
 }
-/* 
-int main (void)
-{
-	char	str[20];
 
-    str[20] = "hello there";
-    printf("mine: %s\n", (char *) ft_memset(str, 49, sizeof (char) * 4));
-    printf("real: %s", (char *) memset(str, 49, sizeof (char) * 4));
-    return (0);
-}
-*/
+// int main (void)
+// {
+// 	char	*str;
+
+// 	str = ft_strdup("hello worlds");
+// 	if (str == NULL)
+// 		return (1);
+//     printf("mine: %s\n", (char *) ft_memset(str, '1', sizeof (char) * 4));
+//     //printf("real: %s", (char *) memset(str, 49, sizeof (char) * 4));
+// 	free (str);
+//     return (0);
+// }

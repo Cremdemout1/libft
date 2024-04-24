@@ -3,74 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:32:40 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/08 15:20:55 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/11 16:55:17 by ycantin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	size_t		i;
-	char		*ptr;
-	const char	*copd;
-
-	i = 0;
-	ptr = (char *)dest;
-	copd = (const char *)src;
-	while (i < n)
-	{
-		ptr[i] = copd[i];
-		i++;
-	}
-	return (dest);
-}
-
-
-t_list	*ft_lstlast(t_list *lst)
-{
-    if (!lst)
-        return (NULL);
-    while (lst -> next)
-        lst = lst -> next;
-    return (lst);
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *current)
-{
-    if (current)
-    {
-        current -> next = *lst;
-        *lst = current; 
-    }
-}
-
-t_list	*ft_lstnew(void *content)
-{
-    t_list *list;
-
-    list = malloc (sizeof (t_list));
-    if (!list)
-        return (NULL);
-    list -> content = content;
-    list -> next = NULL;
-    return (list);
-}
-*/
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst)

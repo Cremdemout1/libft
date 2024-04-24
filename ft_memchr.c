@@ -6,7 +6,7 @@
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:42:05 by yohan             #+#    #+#             */
-/*   Updated: 2024/04/09 08:09:49 by yohan            ###   ########.fr       */
+/*   Updated: 2024/04/23 21:20:14 by yohan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	ptr = (unsigned char *)str;
 	while (i < n)
 	{
-		if ((unsigned char)ptr[i] == (unsigned char)c)
+		if (ptr[i] == (unsigned char)c)
 			return ((char *)ptr + i);
 		i++;
 	}
@@ -30,10 +30,10 @@ void	*ft_memchr(const void *str, int c, size_t n)
 /* 
 int main (void)
 {
-	char	x[];
+	char	*x;
 
-    x[] = "absdurbuivbasliubviruueivb";
+    x = "absdurbuivbasliubviruueivb";
     printf ("%s\n", (char *) ft_memchr(x, 'l', 15));
-    printf ("%s", (char *)memchr(x, 'l', 15));
+    //printf ("%s", (char *)memchr(x, 'l', 15));
 }
-*/
+ */
